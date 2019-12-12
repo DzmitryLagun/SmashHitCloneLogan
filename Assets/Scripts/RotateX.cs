@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate : MonoBehaviour
+public class RotateX : MonoBehaviour
 {
+    [SerializeField]
 
+    private float _speedRotateX = 5.0f;
     private void Update()
     {
-        float speedRotate = 10.0f;
 
         Vector3 rotate = new Vector3(2.0f, 0.0f, 0.0f);
 
-        Vector3 translateRotate = rotate * speedRotate * Time.deltaTime;
+        Vector3 translateRotate = rotate * _speedRotateX * Time.deltaTime;
 
         transform.Rotate(translateRotate);
 
