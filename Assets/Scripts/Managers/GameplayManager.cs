@@ -10,4 +10,9 @@ public class GameplayManager : MonoBehaviour
         var chunkPrefab = settingsManager.ChunkPrefabs[index];
         var newChunk = Instantiate(chunkPrefab);
     }
+
+    private void Update()
+    {
+
+    }
 }
