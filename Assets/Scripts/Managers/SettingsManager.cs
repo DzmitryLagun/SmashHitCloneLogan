@@ -8,6 +8,8 @@ public class SettingsManager : MonoBehaviour
 
     [SerializeField]
     public float CameraSpeed = 2.0f;
+    [SerializeField]
+    public List<Chunk> ChunkPrefabs = null;
 
     private void Start()
     {
