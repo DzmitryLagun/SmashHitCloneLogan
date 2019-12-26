@@ -43,6 +43,6 @@ public class GameplayManager : MonoBehaviour
     }
     private void OnCameraEnteredNextChunkGenerationTrigger()
     {
-
+        SpawnNextChunk();
     }
 }
