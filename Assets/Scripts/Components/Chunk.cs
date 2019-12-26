@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Chunk : MonoBehaviour
 {
+    public Transform NextChunkSpawnPoint { get { return _nextChunkSpawnPoint; } }
+
     [SerializeField]
     private List<Transform> _targetPositions = null;
+    [SerializeField]
+    private Transform _nextChunkSpawnPoint = null;
 
     private void Start()
     {
