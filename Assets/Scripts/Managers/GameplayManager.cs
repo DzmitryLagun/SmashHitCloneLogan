@@ -5,6 +5,8 @@ public class GameplayManager : MonoBehaviour
 {
     [SerializeField]
     private CameraNextChunkGenerationTriggerHandler _cameraTriggerHandler = null;
+    [SerializeField]
+    private TargetDestroyerTriggerHandler _projectileTriggerHandler = null;
 
     private Queue<Chunk> _spawnedChunks = new Queue<Chunk>();
     private Chunk _currentChunk = null;
@@ -14,6 +16,29 @@ public class GameplayManager : MonoBehaviour
         for (int i = 0; i < SettingsManager.Instance.ChunksAheadCount; ++i)
         {
             SpawnNextChunk();
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Найти точку для спавна шарика
+            Vector2 mousePosition = Input.mousePosition;
+            var ray = Camera.main.ScreenPointToRay(mousePosition);
+
+            //Заспавнить шарик
+            var projectileObject = Instantiate(SettingsManager.Instance.Projectile);
+            projectileObject.transform.position = ray.origin + Camera.main.transform.forward;
+
+            //Взять с шарика компонент Rigidbody
+            var projectileRigidbody = projectileObject.GetComponent<Rigidbody>();
+
+            //Вычислить силу и направление полёта шарика
+            Vector3 direction = ray.direction;
+
+            //Придать шарику силу для полёта
+            projectileRigidbody.AddForce(direction * SettingsManager.Instance.ProjectileThrowingImpulse, ForceMode.Impulse);
         }
     }
 
@@ -59,5 +84,10 @@ public class GameplayManager : MonoBehaviour
     private void OnCameraEnteredNextChunkGenerationTrigger()
     {
         SpawnNextChunk();
+    }
+
+    private void DestroyHitTarget()
+    {
+        
     }
 }

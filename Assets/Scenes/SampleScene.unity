@@ -169,6 +169,11 @@ MonoBehaviour:
   TargetsPrefabs:
   - {fileID: 3002529810146837175, guid: d8b5183d74dae5940a70db9572fdf2e5, type: 3}
   - {fileID: 7188255550585583166, guid: 5bbd9913eae314a4c91fc12231de3400, type: 3}
+  Projectile: {fileID: 1355860918279686439, guid: 7fae82b40463e4e409d6027f5c9843f8,
+    type: 3}
+  ProjectileThrowingImpulse: 50
+  ChunksAheadCount: 20
+  ChunksBehindCount: 5
 --- !u!4 &494870785
 Transform:
   m_ObjectHideFlags: 0
@@ -312,7 +317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229633887}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 9.6, z: 0}
+  m_LocalPosition: {x: -0.2, y: 21.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -338,7 +343,7 @@ PrefabInstance:
     - target: {fileID: 166411993419192809, guid: ed21568d7db5f934b8e0da68bf6c0df8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.16
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 166411993419192809, guid: ed21568d7db5f934b8e0da68bf6c0df8,
         type: 3}
