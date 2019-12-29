@@ -5,8 +5,6 @@ public class GameplayManager : MonoBehaviour
 {
     [SerializeField]
     private CameraNextChunkGenerationTriggerHandler _cameraTriggerHandler = null;
-    [SerializeField]
-    private TargetDestroyerTriggerHandler _projectileTriggerHandler = null;
 
     private Queue<Chunk> _spawnedChunks = new Queue<Chunk>();
     private Chunk _currentChunk = null;
@@ -76,7 +74,7 @@ public class GameplayManager : MonoBehaviour
         if (_spawnedChunks.Count > settingsManager.ChunksAheadCount + settingsManager.ChunksBehindCount)
         {
             var chunkToDelete = _spawnedChunks.Dequeue();
-            Destroy(chunkToDelete.gameObject);   
+            Destroy(chunkToDelete.gameObject);
         }
 
         newChunk.gameObject.name = newChunk.gameObject.name.Replace("(Clone)", "");
@@ -84,10 +82,5 @@ public class GameplayManager : MonoBehaviour
     private void OnCameraEnteredNextChunkGenerationTrigger()
     {
         SpawnNextChunk();
-    }
-
-    private void DestroyHitTarget()
-    {
-        
     }
 }
