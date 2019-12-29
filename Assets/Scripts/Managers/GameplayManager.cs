@@ -6,10 +6,15 @@ public class GameplayManager : MonoBehaviour
     [SerializeField]
     private CameraNextChunkGenerationTriggerHandler _cameraTriggerHandler = null;
 
+    private Queue<Chunk> _spawnedChunks = new Queue<Chunk>();
     private Chunk _currentChunk = null;
+
     private void Start()
     {
-        SpawnNextChunk();
+        for (int i = 0; i < SettingsManager.Instance.ChunksAheadCount; ++i)
+        {
+            SpawnNextChunk();
+        }
     }
 
     private void OnEnable()
@@ -29,7 +34,7 @@ public class GameplayManager : MonoBehaviour
         var chunkPrefab = settingsManager.ChunkPrefabs[index];
         var newChunk = Instantiate(chunkPrefab);
 
-        if (_currentChunk != null)
+        if (_spawnedChunks.Count > 0)
         {
             newChunk.transform.position = _currentChunk.NextChunkSpawnPoint.position;
             newChunk.transform.rotation = _currentChunk.NextChunkSpawnPoint.rotation;
@@ -39,7 +44,17 @@ public class GameplayManager : MonoBehaviour
             newChunk.transform.position = Vector3.zero;
             newChunk.transform.rotation = Quaternion.identity;
         }
+
         _currentChunk = newChunk;
+        _spawnedChunks.Enqueue(newChunk);
+
+        if (_spawnedChunks.Count > settingsManager.ChunksAheadCount + settingsManager.ChunksBehindCount)
+        {
+            var chunkToDelete = _spawnedChunks.Dequeue();
+            Destroy(chunkToDelete.gameObject);   
+        }
+
+        newChunk.gameObject.name = newChunk.gameObject.name.Replace("(Clone)", "");
     }
     private void OnCameraEnteredNextChunkGenerationTrigger()
     {

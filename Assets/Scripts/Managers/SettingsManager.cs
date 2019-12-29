@@ -12,6 +12,10 @@ public class SettingsManager : MonoBehaviour
     public List<Chunk> ChunkPrefabs = null;
     [SerializeField]
     public List<GameObject> TargetsPrefabs = null;
+    [SerializeField]
+    public int ChunksAheadCount = 20;
+    [SerializeField]
+    public int ChunksBehindCount = 5;
 
     private void Start()
     {
