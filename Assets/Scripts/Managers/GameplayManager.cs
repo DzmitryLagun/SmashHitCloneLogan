@@ -37,6 +37,10 @@ public class GameplayManager : MonoBehaviour
 
             //Придать шарику силу для полёта
             projectileRigidbody.AddForce(direction * SettingsManager.Instance.ProjectileThrowingImpulse, ForceMode.Impulse);
+
+            projectileObject.gameObject.name = projectileObject.gameObject.name.Replace("(Clone)", "");
+
+            Destroy(projectileObject, 5);
         }
     }
 

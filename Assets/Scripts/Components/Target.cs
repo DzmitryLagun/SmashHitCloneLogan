@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Target : MonoBehaviour
 {
@@ -8,6 +8,9 @@ public class Target : MonoBehaviour
     private GameObject _nonDestroyedDummy = null;
     [SerializeField]
     private GameObject _destroyedDummy = null;
+    [SerializeField]
+    private int Score = 1;
+    private float Reset = 0.1f;
 
     private bool _isDestroyed = false;
 
@@ -22,17 +25,24 @@ public class Target : MonoBehaviour
         {
             return;
         }
-
-
+        
         Debug.Log("OnCollisionEnter", this);
         _nonDestroyedDummy.SetActive(false);
         _destroyedDummy.SetActive(true);
 
-
         var rigidbodies = _destroyedDummy.GetComponentsInChildren<Rigidbody>();
-        foreach(var body in rigidbodies)
+        foreach (var body in rigidbodies)
         {
             body.AddExplosionForce(400.0f, collision.contacts[0].point, 5.0f);
         }
+
+        ScoreManager.Instance.ModifyScore(Score);
+
+        FrostEffect.Instance.ResetFrost(Reset);
+
+        _isDestroyed = true;
+
+        
     }
+
 }

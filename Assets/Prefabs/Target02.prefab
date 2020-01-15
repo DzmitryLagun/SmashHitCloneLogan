@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 297414572799726109}
   - component: {fileID: 1606390340185388832}
   - component: {fileID: 9112196248935310}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 8660730363380980592}
   - component: {fileID: 4326698165210574613}
   - component: {fileID: 249484654294017533}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Downbody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 6160605607643716527}
   - component: {fileID: 2813217262132464494}
   - component: {fileID: 89442085187564141}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LegRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 2749951701696794434}
   - component: {fileID: 8111246490399681894}
   - component: {fileID: 6699508634557538489}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1236,7 +1236,7 @@ GameObject:
   - component: {fileID: 7674936398476751073}
   - component: {fileID: 6963781711228009910}
   - component: {fileID: 4054540397379482957}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1515,7 +1515,7 @@ GameObject:
   - component: {fileID: 2463345411571904342}
   - component: {fileID: 5430309963584278282}
   - component: {fileID: 7516598274436367573}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1819,7 +1819,7 @@ GameObject:
   - component: {fileID: 5263902206025802346}
   - component: {fileID: 3665483103398402317}
   - component: {fileID: 1170883381591408695}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1943,7 +1943,7 @@ Transform:
   m_GameObject: {fileID: 3002529810146837175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.86, y: 10.674, z: 0.7}
-  m_LocalScale: {x: 0.37414774, y: 0.37414774, z: 0.37414774}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 2452148699024218580}
   - {fileID: 5705287198256059321}
@@ -1962,6 +1962,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c1439dddb835348bc16d21a4610bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nonDestroyedDummy: {fileID: 17027076027362923}
+  _destroyedDummy: {fileID: 6492070943874694526}
+  Score: 4
 --- !u!54 &2549189319395806234
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1991,7 +1994,7 @@ GameObject:
   - component: {fileID: 5033768882660904060}
   - component: {fileID: 5596141049861214747}
   - component: {fileID: 5717517153120626716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2394,7 +2397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4463645033230467182}
   - component: {fileID: 3338634292972834349}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2642,7 +2645,7 @@ GameObject:
   - component: {fileID: 6017870406690958055}
   - component: {fileID: 6994900092707607243}
   - component: {fileID: 5270020588313790284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2751,7 +2754,7 @@ GameObject:
   - component: {fileID: 1761576093086316375}
   - component: {fileID: 5425958538183565446}
   - component: {fileID: 7882382659036442586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2864,7 +2867,7 @@ GameObject:
   - component: {fileID: 175282347525959047}
   - component: {fileID: 8606041668147314081}
   - component: {fileID: 9163876960152223626}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2970,7 +2973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2452148699024218580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Destroyed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3012,7 +3015,7 @@ GameObject:
   - component: {fileID: 5602168502193589866}
   - component: {fileID: 1044011509006050705}
   - component: {fileID: 7644134960761968717}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3121,7 +3124,7 @@ GameObject:
   - component: {fileID: 5323971115799659704}
   - component: {fileID: 4386850103465638253}
   - component: {fileID: 3340699881870472777}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3227,7 +3230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 494938600108217692}
   - component: {fileID: 2350857811232200215}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3278,7 +3281,7 @@ GameObject:
   - component: {fileID: 4953036496781237826}
   - component: {fileID: 8350679262518987048}
   - component: {fileID: 136624435160967644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3384,7 +3387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5834589667043798677}
   - component: {fileID: 6025078991165589281}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3435,7 +3438,7 @@ GameObject:
   - component: {fileID: 6824756626881506549}
   - component: {fileID: 928785571878191464}
   - component: {fileID: 4405129951762234993}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3544,7 +3547,7 @@ GameObject:
   - component: {fileID: 4817255614697726578}
   - component: {fileID: 1640773192535246743}
   - component: {fileID: 5289711097670918964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LegLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3654,7 +3657,7 @@ GameObject:
   - component: {fileID: 8184906451853138410}
   - component: {fileID: 4207428139367873332}
   - component: {fileID: 4813603194507362214}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
