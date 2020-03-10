@@ -38,8 +38,6 @@ public class Target : MonoBehaviour
 
         ScoreManager.Instance.ModifyScore(Score);
 
-        FrostEffect.Instance.ResetFrost(Reset);
-
         _isDestroyed = true;
 
         
